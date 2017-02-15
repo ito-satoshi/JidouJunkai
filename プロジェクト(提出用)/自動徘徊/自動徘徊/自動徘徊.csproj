@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{25918831-C19D-4DD2-A021-CE230A7BD002}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>自動徘徊</RootNamespace>
+    <AssemblyName>自動徘徊</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DialogURL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogURL.Designer.cs">
+      <DependentUpon>DialogURL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpヘルプ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helpヘルプ.Designer.cs">
+      <DependentUpon>Helpヘルプ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeepOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeepOut.Designer.cs">
+      <DependentUpon>KeepOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Time.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Time.Designer.cs">
+      <DependentUpon>Time.cs</DependentUpon>
+    </Compile>
+    <Compile Include="URLヘルプ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="URLヘルプ.Designer.cs">
+      <DependentUpon>URLヘルプ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="再起動ヘルプ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="再起動ヘルプ.Designer.cs">
+      <DependentUpon>再起動ヘルプ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="取得間隔ヘルプ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="取得間隔ヘルプ.Designer.cs">
+      <DependentUpon>取得間隔ヘルプ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="検索ヘルプ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="検索ヘルプ.Designer.cs">
+      <DependentUpon>検索ヘルプ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="詳細画面.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="詳細画面.Designer.cs">
+      <DependentUpon>詳細画面.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DialogURL.resx">
+      <DependentUpon>DialogURL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helpヘルプ.resx">
+      <DependentUpon>Helpヘルプ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeepOut.resx">
+      <DependentUpon>KeepOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Time.resx">
+      <DependentUpon>Time.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="URLヘルプ.resx">
+      <DependentUpon>URLヘルプ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="再起動ヘルプ.resx">
+      <DependentUpon>再起動ヘルプ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="取得間隔ヘルプ.resx">
+      <DependentUpon>取得間隔ヘルプ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="検索ヘルプ.resx">
+      <DependentUpon>検索ヘルプ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="詳細画面.resx">
+      <DependentUpon>詳細画面.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
